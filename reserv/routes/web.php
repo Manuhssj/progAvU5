@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
-
+use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\UserController;
 
 /*
@@ -32,6 +32,8 @@ Route::get('suma/{num1}/{num2}/{num3?}',function($num1,$num2,$num3=0){
     echo $num1 + $num2 + $num3;
 })->where(['num1'=>'[0-9]+','num2'=>'[0-9]+']);
 
+
+Route::get('reserv/',[ReservationController::class,'index']);
 
 Route::get('users/', [UserController::class,'index']);
 
