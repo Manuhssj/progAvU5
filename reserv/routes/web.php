@@ -46,7 +46,6 @@ Route::post('users/', [UserController::class,'store']);
 
 
 
-
 // Route::post('suma/',function(Request $request){
 
 // });
